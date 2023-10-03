@@ -1,0 +1,20 @@
+{
+  "name": "circuit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@kevaundray/backend_barretenberg": "^0.7.10-kw-play-around-39eca4612",
+    "@kevaundray/noir_js": "^0.15.0-kw-play-around-2d3e9302e"
+  },
+  "devDependencies": {
+    "rollup-plugin-copy": "^3.5.0",
+    "vite": "^4.4.9"
+  }
+}
