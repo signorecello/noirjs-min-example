@@ -19,15 +19,20 @@ const wasmContentTypePlugin = {
 	},
 };
 
-export default defineConfig({
-	plugins: [
-        copy({
-            targets: [
-                { src: 'node_modules/**/*.wasm', dest: 'node_modules/.vite/dist' },
-            ],
-            copySync: true,
-            hook: "buildStart"
-        }),
-        wasmContentTypePlugin,
-    ],
+export default defineConfig(({ command }) => {
+    if (command === "serve") {
+        return {
+            plugins: [
+            copy({
+                targets: [
+                    { src: 'node_modules/**/*.wasm', dest: 'node_modules/.vite/dist' },
+                ],
+                copySync: true,
+                hook: "buildStart"
+            }),
+            command === "serve" ? wasmContentTypePlugin : []
+        ]}
+    }
+    
+    return {}
 });
