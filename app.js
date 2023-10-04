@@ -1,5 +1,5 @@
-import { Noir } from '@signorecello/noir_js';
-import { BarretenbergBackend } from '@signorecello/backend_barretenberg';
+import { Noir } from '@noir-lang/noir_js';
+import { BarretenbergBackend } from '@noir-lang/backend_barretenberg';
 import circuit from './circuit/target/circuit.json';
 
 document.addEventListener('DOMContentLoaded', async () => {
